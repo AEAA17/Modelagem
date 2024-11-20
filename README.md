@@ -115,7 +115,7 @@ bptest(modelo1) # Realiza o teste de breuch-pagan
 #### H1: A variância não é constante (heterocedasticidade).
 #### O teste de homocedasticidade foi realizado usando o teste de Breusch e Pagan, o resultado do teste de Breusch e Pagan foi de 1, como mostra a Figura 14, considerando o nível de significância de 5%, não rejeitamos a hipótese nula, indicando que a variância é constante.
 
-![Breuch-Pagan]((https://github.com/AEAA17/Modelagem/blob/41a75cb457deaf7f1403c773da453af58cc5ce87/Imagens/Breusch-Pagan.png))
+![Breuch-Pagan](https://github.com/AEAA17/Modelagem/blob/41a75cb457deaf7f1403c773da453af58cc5ce87/Imagens/Breusch-Pagan.png)
 
 
 ## Otimização
