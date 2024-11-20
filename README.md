@@ -1,6 +1,7 @@
 # Análise Bibliométrica e Modelagem/Otimização do Poli(succinato de butileno)(PBS)
 
-# Objetivo
+## Objetivo
+
 ### Criação de uma análise bibliométrica sobre o PBS e reproduzir a  otimização da etapa de transesterificação na síntese do PBS feita em outro software pago por Ferreira (2013)(https://www.ima.ufrj.br/index.php/en/pos-graduacao/teses-e-dissertacoes/dissertacoes/2013/236-estudo-da-influencia-de-parametros-reacionais-na-sintese-do-poli-succinato-de-buteno-pbs-por-metodos-estatisticos-e-preparo-de-nanocompositos-pbs-argila-organofilica-via-polimerizacao-in-situ).
 
 
@@ -19,7 +20,7 @@ install.packages("lmtest") # Instala a biblioteca lmtest
 library(lmtest) # Carega a biblioteca lmtest
 
 ```
-# Analise Bibliometrica
+## Análise Bibliométrica
 
 
 ```
@@ -63,7 +64,7 @@ biblioshiny() # Função para utizar o Bibliometrix
 
 #### Já os termos de nicho, como "removal", "toxicity" e "oxidation", tratam de questões ambientais. Apesar de relevantes, têm menor destaque em comparação com os temas centrais, indicando que pesquisas ambientais sobre o PBS estão mais consolidadas, mas não são o foco principal atual.
 
-# Modelagem
+## Modelagem
 
 #### Segundo Ferreira (2013), a síntese do PBS foi realizada em duas etapas, ambas em sistema fechado. Na primeira, o pré-polímero foi preparado por esterificação em um reator de três bocas aquecido a 150°C, com controle de temperatura feito por termopar acoplado a uma placa de aquecimento. A mistura equimolar de ácido succínico (0,304 mol) e 1,4-butanodiol foi agitada magneticamente sob fluxo de nitrogênio (0,75 bar), enquanto a água, subproduto da reação, era removida e condensada com auxílio de nitrogênio líquido. O produto foi purificado por precipitação em etanol gelado e seco em vácuo por 24 horas.
 
@@ -89,7 +90,7 @@ print(df) # Mostra o dataframe
 
 ## Criação e Avaliação do Modelo
 
-### Regressão Linear 
+## Regressão Linear 
 ```
 modelo1 <- lm(y~T*C,data=df)# Realiza a Regressão no df, com y como resposta e T e C variáveis independentes
 summary(modelo1) # Mostra o resultado da Regressão
@@ -103,7 +104,7 @@ summary(modelo1) # Mostra o resultado da Regressão
 ##### Com base nos coeficientes da regressão, é possível prever a resposta utilizando a equação fornecida, válida para ambos os softwares: Mw=16620,71+421,75⋅T+1706,25⋅C−1059,52⋅C⋅T
 
 
-### Avaliação do Modelo
+## Avaliação do Modelo
 ```
 anov <- aov(modelo1) # Realiza o ANOVA no modelo criado
 summary(anov)# Mostra os resultados do ANOVA
@@ -137,7 +138,7 @@ bptest(modelo1) # Realiza o teste de breusch-pagan
 ## Otimização
 #### A otimização foi realizada por meio de superfície de resposta. Embora pudesse ser construída com o modelo 1, para uma melhor visualização, optou-se por criar o modelo 2, agora utilizando os valores das variáveis em vez dos níveis.
 
-### Criação do Modelo2 para melhor visualização
+## Criação do Modelo2 para melhor visualização
 ```
 T1<-c(200,200,250,250,225,225,225)
 C1<-c(0.1,0.3,0.1,0.3,0.2,0.2,0.2)
