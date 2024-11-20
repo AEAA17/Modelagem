@@ -15,19 +15,18 @@ Ordem <- c(1, 2, 3, 4, 5, 6, 7)
 T <- c(-1, -1, 1, 1, 0, 0, 0)
 C <- c(-1, 1, -1, 1, 0, 0, 0)
 y <- c(13419, 18950, 16381, 17675, 16422, 16673, 16852)
-planej <- data.frame(Ordem, T, C, y)
-print(planej)
+df <- data.frame(Ordem, T, C, y)
+print(df)
 
 
 # Criação e Avaliação do Modelo
-modelo1 <- lm(y~T*C,data=planej)
+modelo1 <- lm(y~T*C,data=df)
 summary(modelo1)
 anov <- aov(modelo1)
 summary(anov)
 shapiro.test(modelo1$residuals) 
 bptest(modelo1)
-par(mfrow=c(1,1))
-plot(modelo1) 
+
 
 
 # Criação do Modelo2 para melhor visualização
