@@ -1,7 +1,7 @@
-# Analise Bibliometrica e Modelagem/Otimização do Poli(succinato de butileno)(PBS)
+# Análise Bibliométrica e Modelagem/Otimização do Poli(succinato de butileno)(PBS)
 
 # Objetivo
-### Criação de uma análise bibliométrica sobre o PBS e reproduzir a  otimização da etapa de transesterificação na síntese do PBS feita em outro software pago por Ferreira (2013).
+### Criação de uma análise bibliométrica sobre o PBS e reproduzir a  otimização da etapa de transesterificação na síntese do PBS feita em outro software pago por Ferreira (2013)(https://www.ima.ufrj.br/index.php/en/pos-graduacao/teses-e-dissertacoes/dissertacoes/2013/236-estudo-da-influencia-de-parametros-reacionais-na-sintese-do-poli-succinato-de-buteno-pbs-por-metodos-estatisticos-e-preparo-de-nanocompositos-pbs-argila-organofilica-via-polimerizacao-in-situ).
 
 
 ## Instalando e Caregando Bibliotecas
